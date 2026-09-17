@@ -31,7 +31,12 @@ html {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  a.frame:hover {
+    transform: none;
   }
 }
 
@@ -97,9 +102,22 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: rgba(7, 8, 10, 0.72);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.site-header.is-scrolled {
   background: rgba(7, 8, 10, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--hairline);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--hairline);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition-duration: 0.01ms;
+  }
 }
 
 nav {
@@ -393,7 +411,7 @@ section {
 }
 
 a.frame:hover {
-  transform: scale(1.015);
+  transform: translateY(-2px);
   border-color: rgba(200, 245, 74, 0.28);
 }
 
@@ -611,4 +629,56 @@ a.frame:hover {
   .work-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* —— Hero load (CSS；不挡 LCP／不依赖 JS) —— */
+@keyframes m-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes m-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes m-fade-scale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 901px) {
+  .hero .eyebrow {
+    animation: m-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero h1 {
+    animation: m-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  }
+  .hero .role {
+    animation: m-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+  }
+  .hero .trust {
+    animation: m-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+  }
+  .hero .act {
+    animation: m-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+  }
+  .hero-stage {
+    animation: m-fade-scale 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  }
+  .hero-actions {
+    animation: m-fade 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) and (max-width: 900px) {
+  .hero-stage {
+    animation: m-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero > div {
+    animation: m-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  }
+}
+
+.frame .media {
+  transform: translateZ(0);
 }

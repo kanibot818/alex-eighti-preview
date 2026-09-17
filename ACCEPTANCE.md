@@ -1,6 +1,6 @@
 # ACCEPTANCE｜Wendy v2 Editorial Preview
 
-對照：`seven-checklist-v2.md` + Aden `copy-aden.md`  
+對照：`seven-checklist-v2.md` + Aden `copy-aden.md` + motion 包（A. 克制質感）  
 目標：`https://kanibot818.github.io/alex-eighti-preview/`（非正式站）
 
 ## Seven checklist v2
@@ -22,7 +22,23 @@
 - [x] 經歷 5 條亮點
 - [x] Footer：mailto + https://github.com/Chuanyin1202；無 Eighti 品牌敘事
 
+## 動畫｜A. 克制質感（Wendy）
+
+對照：`alex-eighti-redesign/v2/motion/`（storyboard／do-dont／reduced-motion／seven-motion-notes）
+
+- [x] 技術：GSAP 3 + ScrollTrigger（jsDelivr CDN）；`gsap.matchMedia()` 分桌面／手機／reduced-motion
+- [x] 只動 `transform`／`opacity`；入場 **once** 為主；**無 pin**；無第二套動畫庫
+- [x] Hero 載入：眉標／姓名／副標等 stagger fade-up；舞台 fade+scale；CTA 最後 fade（**CSS**，不挡 LCP）
+- [x] 服務：標題 fade-up；列表兩組（01–02／03–04），**無**逐列飛入
+- [x] 作品：標題→英雄→側欄 stagger→下方三卡 stagger；桌面輕圖片揭示（media yPercent）；手機只 fade
+- [x] 經歷：整塊 fade（無五條逐條）
+- [x] CTA：fade（桌面按鈕輕 scale；手機只 fade）；無無限 pulse
+- [x] Nav：滾過 Hero 後 hairline／微 blur（`.is-scrolled`）
+- [x] **禁止項未做**：打字機、自定义游標、長 pin、手機 pin／強 parallax、逐行服務／經歷
+- [x] `prefers-reduced-motion: reduce`：瞬顯、無 scrub／parallax；`scroll-behavior: auto`；文字預設可見（CSS 動畫僅在 `no-preference`）
+- [x] 關掉 JS：內容完整、mailto／`#works` 可用（Hero CSS 仍可播；Scroll 入場退回靜態）
+
 ## 部署約束
 
 - [x] 僅推 `kanibot818/alex-eighti-preview` Pages
-- [x] **未**改動 `https://alex.eighti.app`
+- [x] **未**改動 `https://alex.eighti.app`（正式站 `theme-color` 仍為 `#f4ece0`）
