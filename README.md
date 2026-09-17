@@ -1,10 +1,27 @@
 # alex-eighti-preview
 
-**Alex Huang** 個人站重設計 MVP 的**靜態預覽版**。
+**Alex Huang** 個人站 **Wendy v2 editorial** 靜態預覽（編輯工作室風）。
 
 > ⚠ **非正式站**。請勿部署到 `https://alex.eighti.app`，也不要改動正式站 DNS／正式部署。
 
-對齊規格：`/workspace/alex-eighti-redesign/` 內 `final-tokens.md`、`wireframe-dark.html`、`copy-aden.md`、`seven-checklist.md`、`aden-mvp-ab.md`。
+## GitHub Pages
+
+**https://kanibot818.github.io/alex-eighti-preview/**
+
+Source：`main` branch，root `/`。
+
+## 設計源
+
+對齊 `/workspace/alex-eighti-redesign/v2/`：
+
+- `wireframe-editorial.html`（結構／視覺金標）
+- `final-tokens-v2.md`
+- `seven-checklist-v2.md`
+- `old-vs-new.md`
+- `benchmarks-editorial.md`
+- 文案：`../copy-aden.md`
+
+相對 v1：超大 Display 姓名、酸綠 `#C8F54A` CTA、Hero 左文右舞台、服務編號列表、作品英雄＋側欄＋不對稱三卡、經歷強調線亮點（非時間軸、非手帳）。
 
 ## 本地預覽
 
@@ -12,23 +29,17 @@
 python3 -m http.server 8765 --directory /workspace/alex-eighti-preview
 ```
 
-瀏覽器開啟：http://localhost:8765/
-
-或直接開檔：
-
-```bash
-xdg-open /workspace/alex-eighti-preview/index.html
-```
+http://localhost:8765/
 
 ## 檔案
 
 | 檔案 | 說明 |
 |------|------|
-| `index.html` | 單頁 MVP |
-| `styles.css` | Design tokens＋版面 |
-| `ACCEPTANCE.md` | 對照 seven-checklist 勾選 |
+| `index.html` | 單頁 editorial MVP |
+| `styles.css` | Design tokens v2＋版面 |
+| `ACCEPTANCE.md` | 對照 seven-checklist-v2 + Aden |
 | `README.md` | 本說明 |
 
-## 結構（IA）
+## IA
 
-Hero → 服務邊界（短條列）→ 作品 `#works` → 經歷亮點（ul）→ 合作邀請 → Footer
+Hero → 服務邊界（01–04）→ 作品 `#works`（劇場）→ 經歷亮點 → 合作邀請 → Footer

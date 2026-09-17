@@ -4,162 +4,195 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="Alex Huang — 獨立 AI 產品開發者／全端工程師。開放接案與技術顧問。"/>
-  <title>Alex Huang — 獨立 AI 產品開發者／全端工程師（預覽）</title>
+  <meta name="theme-color" content="#07080A"/>
+  <title>Alex Huang — 獨立 AI 產品開發者</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <p class="preview-banner wrap">預覽版 · 非正式站 · 對齊 Wendy D 深色＋Aden 文案 · 請勿當作 https://alex.eighti.app</p>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <p class="preview-badge">Wendy v2 editorial preview · 非正式站</p>
+
+  <header class="site-header" id="site-header">
+    <nav aria-label="主要導覽">
+      <a class="brand" href="#">Alex Huang</a>
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="開啟選單"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <div class="links" id="nav-links">
+        <a href="#services">服務</a>
+        <a href="#works">作品</a>
+        <a href="#exp">經歷</a>
+        <a href="#contact">聯絡</a>
+      </div>
+    </nav>
+  </header>
 
   <div class="wrap">
-    <header class="site-header">
-      <nav class="nav" aria-label="主要導覽">
-        <a class="brand" href="#">Alex Huang</a>
-        <input class="nav-check" type="checkbox" id="nav-toggle" aria-controls="nav-menu"/>
-        <label class="nav-toggle" for="nav-toggle" aria-label="開啟選單">
-          <span></span><span></span><span></span>
-        </label>
-        <div class="nav-links" id="nav-menu">
-          <a href="#services">服務</a>
-          <a href="#works">作品</a>
-          <a href="#exp">經歷</a>
-          <a href="#contact">聯絡</a>
+    <main id="main">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Portfolio · Taiwan</p>
+          <h1>Alex Huang</h1>
+          <p class="role">獨立 AI 產品開發者／全端工程師</p>
+          <p class="trust">16 年軟體交付經驗；近兩年獨立把 6 個 AI 系統做到 production。專長 LLM agent、MCP 與多模態 workflow。</p>
+          <p class="act">目前開放接案與技術顧問，可遠端、可出差。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:alexabc@gmail.com">來信聊聊接案</a>
+            <a class="btn btn-text" href="#works">看作品</a>
+          </div>
         </div>
-      </nav>
-    </header>
+        <aside class="hero-stage" aria-label="代表作預覽">
+          <div class="shot" aria-hidden="true"></div>
+          <div class="cap">
+            <strong>AgentSight</strong>
+            代表作｜網站 AI 可見度與 bot 追蹤
+          </div>
+        </aside>
+      </header>
 
-    <header class="hero">
-      <h1>Alex Huang</h1>
-      <p class="role">獨立 AI 產品開發者／全端工程師</p>
-      <p class="trust">16 年軟體交付經驗；近兩年獨立把 6 個 AI 系統做到 production。專長 LLM agent、MCP 與多模態 workflow。</p>
-      <p class="act">目前開放接案與技術顧問，可遠端、可出差。</p>
-      <div class="actions">
+      <section id="services" aria-labelledby="services-title">
+        <p class="idx">01 — 服務邊界</p>
+        <h2 class="sec-title" id="services-title">可以一起做的事</h2>
+        <ul class="svc">
+          <li>
+            <span class="n" aria-hidden="true">01</span>
+            <div><div class="label">可做</div><div class="val">AI agent／MCP 整合</div></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">02</span>
+            <div><div class="label">可做</div><div class="val">全端產品從規劃到上線</div></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">03</span>
+            <div><div class="label">可做</div><div class="val">雲端部署與維運接手</div></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">04</span>
+            <div><div class="label">合作</div><div class="val">接案／外包／技術顧問</div></div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="works" aria-labelledby="works-title">
+        <p class="idx">02 — 作品</p>
+        <h2 class="sec-title" id="works-title">選過的上線作品</h2>
+
+        <div class="work-hero">
+          <a class="frame" href="https://agentsight.eighti.app" target="_blank" rel="noopener noreferrer">
+            <div class="media" aria-hidden="true">AgentSight</div>
+            <div class="meta">
+              <div class="status">● 線上運行</div>
+              <h3>AgentSight</h3>
+              <p>網站 AI 可見度與 AI bot 追蹤</p>
+            </div>
+          </a>
+          <div class="work-side">
+            <a class="frame" href="https://wos.eighti.app" target="_blank" rel="noopener noreferrer">
+              <div class="media" aria-hidden="true">WOS</div>
+              <div class="meta">
+                <div class="status">● 線上運行</div>
+                <h3>World Order Sim</h3>
+                <p>多 agent 模擬，驗證 MCP／記憶／協作</p>
+              </div>
+            </a>
+            <a class="frame" href="https://reverie.eighti.app" target="_blank" rel="noopener noreferrer">
+              <div class="media" aria-hidden="true">Reverie</div>
+              <div class="meta">
+                <h3>Reverie</h3>
+                <p>AI 協作連載小說，多 LLM＋EPUB</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="work-grid">
+          <div class="frame">
+            <div class="media" aria-hidden="true">StoryMagic</div>
+            <div class="meta">
+              <h3>StoryMagic</h3>
+              <p>多模態 AI 故事（文字／影像／語音）</p>
+            </div>
+          </div>
+          <a class="frame" href="https://voxlydiary.com" target="_blank" rel="noopener noreferrer">
+            <div class="media" aria-hidden="true">Voxly</div>
+            <div class="meta">
+              <h3>Voxly Diary</h3>
+              <p>AI 語音情緒日記</p>
+            </div>
+          </a>
+          <div class="frame">
+            <div class="media" aria-hidden="true">語音待辦</div>
+            <div class="meta">
+              <h3>語音待辦與記帳 AI 助理</h3>
+              <p>Flutter・Whisper（暫名）</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exp" aria-labelledby="exp-title">
+        <p class="idx">03 — 經歷</p>
+        <h2 class="sec-title" id="exp-title">亮點</h2>
+        <ul class="highlights">
+          <li>嵌入式／行動 framework 起家，習慣追到根因</li>
+          <li>客戶現場（ASUS、Compal、Qisda 等）把方案解到能出貨</li>
+          <li>富智康／HMD 技術專案經理，交付 Nokia 8、Sharp AQUOS P1 等；camera framework 整合縮短約 25%</li>
+          <li>2024 年起獨立交付 6 個 production AI 系統</li>
+          <li>現開放接案與技術顧問</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="cta" aria-labelledby="contact-title">
+        <p class="idx">04 — 合作</p>
+        <h2 class="sec-title" id="contact-title">有想法，一起做到上線。</h2>
+        <p>歡迎來信聊聊接案或技術顧問。</p>
         <a class="btn btn-primary" href="mailto:alexabc@gmail.com">來信聊聊接案</a>
-        <a class="btn btn-ghost" href="#works">看作品</a>
-      </div>
-    </header>
-
-    <section id="services" aria-labelledby="services-heading">
-      <h2 id="services-heading">服務邊界</h2>
-      <ul class="svc-list">
-        <li>可做：AI agent／MCP 整合</li>
-        <li>可做：全端產品從規劃到上線</li>
-        <li>可做：雲端部署與維運接手</li>
-        <li>合作：接案／外包／技術顧問</li>
-      </ul>
-    </section>
-
-    <section id="works" aria-labelledby="works-heading">
-      <h2 id="works-heading">作品案例</h2>
-      <div class="grid-works">
-
-        <a class="card" href="https://agentsight.eighti.app" target="_blank" rel="noopener noreferrer">
-          <div class="media" aria-hidden="true">
-            <span class="pill pill--live"><span class="pill-dot"></span>線上運行</span>
-            <span class="media-abbr">AS</span>
-          </div>
-          <div class="card-body">
-            <h3>AgentSight</h3>
-            <p class="oneliner">網站 AI 可見度與 AI bot 追蹤</p>
-            <div class="stack" aria-label="技術棧">
-              <span>Next.js</span><span>Cloudflare</span><span>D1</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="card" href="https://wos.eighti.app" target="_blank" rel="noopener noreferrer">
-          <div class="media" aria-hidden="true">
-            <span class="pill pill--live"><span class="pill-dot"></span>線上運行</span>
-            <span class="media-abbr">WOS</span>
-          </div>
-          <div class="card-body">
-            <h3>World Order Sim</h3>
-            <p class="oneliner">多 agent 模擬，驗證 MCP／記憶／協作</p>
-            <div class="stack" aria-label="技術棧">
-              <span>Next.js</span><span>PostgreSQL</span><span>MCP</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="card" href="https://reverie.eighti.app" target="_blank" rel="noopener noreferrer">
-          <div class="media" aria-hidden="true">
-            <span class="media-abbr">RV</span>
-          </div>
-          <div class="card-body">
-            <h3>Reverie</h3>
-            <p class="oneliner">AI 協作連載小說，多 LLM＋EPUB</p>
-            <div class="stack" aria-label="技術棧">
-              <span>Next.js</span><span>SQLite</span>
-            </div>
-          </div>
-        </a>
-
-        <div class="card card--static">
-          <div class="media" aria-hidden="true">
-            <span class="pill pill--work">作品</span>
-            <span class="media-abbr">SM</span>
-          </div>
-          <div class="card-body">
-            <h3>StoryMagic</h3>
-            <p class="oneliner">多模態 AI 故事（文字／影像／語音）</p>
-          </div>
-        </div>
-
-        <a class="card" href="https://voxlydiary.com" target="_blank" rel="noopener noreferrer">
-          <div class="media" aria-hidden="true">
-            <span class="media-abbr">VD</span>
-          </div>
-          <div class="card-body">
-            <h3>Voxly Diary</h3>
-            <p class="oneliner">AI 語音情緒日記</p>
-            <div class="stack" aria-label="技術棧">
-              <span>Flutter</span><span>Whisper</span>
-            </div>
-          </div>
-        </a>
-
-        <div class="card card--static">
-          <div class="media" aria-hidden="true">
-            <span class="pill pill--work">作品</span>
-            <span class="media-abbr">VM</span>
-          </div>
-          <div class="card-body">
-            <h3>語音待辦與記帳 AI 助理</h3>
-            <p class="oneliner">Flutter・Whisper（暫名）</p>
-            <div class="stack" aria-label="技術棧">
-              <span>Flutter</span><span>Whisper</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="exp" aria-labelledby="exp-heading">
-      <h2 id="exp-heading">經歷亮點</h2>
-      <ul class="highlights">
-        <li>嵌入式／行動 framework 起家，習慣追到根因</li>
-        <li>客戶現場（ASUS、Compal、Qisda 等）把方案解到能出貨</li>
-        <li>富智康／HMD 技術專案經理，交付 Nokia 8、Sharp AQUOS P1 等；camera framework 整合縮短約 25%</li>
-        <li>2024 年起獨立交付 6 個 production AI 系統</li>
-        <li>現開放接案與技術顧問</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="cta-final" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">合作邀請</h2>
-      <p>有 AI 想法，想找人做到上線？歡迎來信。</p>
-      <a class="btn btn-primary" href="mailto:alexabc@gmail.com">來信聊聊接案</a>
-    </section>
+      </section>
+    </main>
 
     <footer class="site-footer">
       <a href="mailto:alexabc@gmail.com">alexabc@gmail.com</a>
-      ·
-      <a href="https://github.com/Chuanyin1202" target="_blank" rel="noopener noreferrer">github.com/Chuanyin1202</a>
-      · 預覽版（非正式站）
+      <a href="https://github.com/Chuanyin1202" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span>Wendy v2 preview · 非正式站</span>
     </footer>
   </div>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      var links = document.getElementById("nav-links");
+      var header = document.getElementById("site-header");
+      if (!toggle || !links) return;
+
+      function setOpen(open) {
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "關閉選單" : "開啟選單");
+        links.classList.toggle("is-open", open);
+        if (header) header.classList.toggle("is-open", open);
+      }
+
+      toggle.addEventListener("click", function () {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { setOpen(false); });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>
